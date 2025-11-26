@@ -1,0 +1,38 @@
+#btn{
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    border-radius: 5px;
+    border: 2px solid green;
+    padding-bottom: 5px;
+
+}
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: skyblue;
+    font-weight: bold;
+}
+body{
+    background-image: linear-gradient(to left, white, red);
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+#name, #email, #password, #admin {
+   margin-top: 20px;
+}
+.card{
+    width: 25rem;
+    height: 300px;
+    background-image: linear-gradient(to right, pink, yellow);
+}
+label{
+    color: blueviolet;
+    font-weight: bold;
+}
+#email, #name {
+    margin-left: 30px;
+}
+#admin{
+    margin-left: 10px;
+}

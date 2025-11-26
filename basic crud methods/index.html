@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./app.js"></script>
+</head>
+<body>
+   <!-- <form action="/posts" method="post"> -->
+    <div>
+        <label for="input-value">name :</label>
+        <input type="text" id="input-value" name="name" />
+    </div>
+    <div>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" />
+    </div>
+    <input type="submit" onclick="onClickListener()"/>
+   <!-- </form> -->
+
+    <script>
+        const inputEle = document.getElementById('input-value');
+        const emailEle = document.getElementById('email');
+
+        async function onClickListener() {
+            const title = inputEle.value;
+            const body = emailEle.value;
+          const response = await fetch('/posts', {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json',
+            },
+            body : JSON.stringify({
+                title : title,
+                body : body,
+                id : 110,
+                userId : 2
+            })
+          })
+          if(response) {
+            alert("data posted successfully");
+            window.location.assign('about.html');
+          }
+        }
+    </script>
+</body>
+</html>
